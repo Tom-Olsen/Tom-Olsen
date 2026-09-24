@@ -11,7 +11,7 @@ This repository builds a personal portfolio at https://tom-olsen.github.io/Tom-O
 - Do not invent biographical details, research claims, project status, or contact information. Ask when facts are missing.
 
 ## Ember links
-- Source: https://github.com/embercraft/Ember
+- Source: https://github.com/Tom-Olsen/Ember
 - Documentation: https://tom-olsen.github.io/Ember/
 
 ## Site structure
