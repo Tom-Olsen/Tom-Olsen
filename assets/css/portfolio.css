@@ -1,0 +1,95 @@
+/* Portfolio styles load after the Dimension template. */
+
+/* Preserve the capitalization written in the HTML, with normal word spacing. */
+h1, h2, h3, h4, h5, h6, label,
+#header .content h1,
+#header .content p,
+#footer .copyright {
+	text-transform: none;
+	font-variant-caps: normal;
+	letter-spacing: 0.025em;
+}
+
+/* Every button shares the transparent, white-outline appearance of About. */
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button,
+#header nav ul li a.button {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	border-radius: 4px;
+	box-shadow: none;
+	color: #ffffff !important;
+	font-family: inherit;
+	font-size: 0.8rem;
+	font-weight: 300;
+	font-variant-caps: normal;
+	height: 2.75rem;
+	line-height: 1.2;
+	letter-spacing: 0.025em;
+	padding: 0 1.25rem;
+	text-align: center;
+	text-transform: none;
+}
+
+button:hover,
+.button:hover,
+#header nav ul li a.button:hover {
+	background-color: rgba(255, 255, 255, 0.075);
+}
+
+button:active,
+.button:active,
+#header nav ul li a.button:active {
+	background-color: rgba(255, 255, 255, 0.175);
+}
+
+button:focus-visible,
+.button:focus-visible {
+	outline: 2px solid #ffffff;
+	outline-offset: 4px;
+}
+
+/* About now gets its border from the same button rule as every other link. */
+#header nav ul,
+#header nav ul li {
+	border: 0;
+}
+
+/* Keep the inactive Algorithms button visually consistent. */
+button:disabled,
+#header button:disabled {
+	opacity: 1;
+}
+
+/* Equal columns add equal outer widths regardless of the label lengths. */
+ul.actions.special.paired {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	width: 28rem;
+	max-width: 100%;
+	margin: 0 auto 2rem;
+}
+
+ul.actions.special.paired li {
+	min-width: 0;
+	width: auto;
+	padding: 0;
+}
+
+ul.actions.special.paired li .button {
+	width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+	ul.actions.special.paired {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
