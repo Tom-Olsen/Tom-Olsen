@@ -61,6 +61,10 @@
 			}
 		}
 
+		button:disabled {
+			opacity: 0.6;
+		}
+
 		.content {
 			border-style: solid;
 			border-color: _palette(border);
@@ -84,8 +88,12 @@
 				}
 			}
 
+			h1 {
+				text-transform: none;
+			}
+
 			p {
-				text-transform: uppercase;
+				text-transform: none;
 				letter-spacing: _font(letter-spacing);
 				font-size: 0.8rem;
 				line-height: 2;
@@ -115,7 +123,7 @@
 						height: 2.75rem;
 						line-height: 2.75rem;
 						padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
-						text-transform: uppercase;
+						text-transform: none;
 						letter-spacing: _font(letter-spacing);
 						font-size: 0.8rem;
 						border-bottom: 0;
