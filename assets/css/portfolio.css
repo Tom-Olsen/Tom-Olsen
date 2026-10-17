@@ -26,13 +26,13 @@ input[type="button"],
 	border-radius: 4px;
 	box-shadow: none;
 	color: #ffffff !important;
-	font-family: inherit;
-	font-size: 0.8rem;
-	font-weight: 300;
+	font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 400;
 	font-variant-caps: normal;
 	height: 2.75rem;
 	line-height: 1.2;
-	letter-spacing: 0.025em;
+	letter-spacing: normal;
 	padding: 0 1.25rem;
 	text-align: center;
 	text-transform: none;
@@ -42,12 +42,14 @@ button:hover,
 .button:hover,
 #header nav ul li a.button:hover {
 	background-color: rgba(255, 255, 255, 0.075);
+	border-color: #ffffff;
 }
 
 button:active,
 .button:active,
 #header nav ul li a.button:active {
 	background-color: rgba(255, 255, 255, 0.175);
+	border-color: #ffffff;
 }
 
 button:focus-visible,
@@ -62,10 +64,14 @@ button:focus-visible,
 	border: 0;
 }
 
-/* Keep the inactive Algorithms button visually consistent. */
+/* Dim unavailable actions and keep them from highlighting. */
 button:disabled,
+.button.disabled,
+.button[aria-disabled="true"],
 #header button:disabled {
-	opacity: 1;
+	opacity: 0.4;
+	background-color: transparent;
+	pointer-events: none;
 }
 
 /* Equal columns add equal outer widths regardless of the label lengths. */
