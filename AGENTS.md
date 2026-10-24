@@ -5,14 +5,16 @@ This repository builds a personal portfolio at https://tom-olsen.github.io/Tom-O
 
 ## Content boundaries
 - Keep the landing page concise and visual.
-- Use the portfolio for approachable project summaries, screenshots, videos, and feature demonstrations.
+- Use the portfolio for concise, approachable project summaries and links. Full Ember feature demonstrations and media belong in the Ember project website's Showcase section.
 - Keep detailed Ember documentation in the Ember repository, not in this portfolio.
-- Link interested readers to Ember's source and documentation.
+- Link interested readers to Ember's source, showcase, and documentation, and to Sparkive for general lessons on computer science, mathematics, and physics.
 - Do not invent biographical details, research claims, project status, or contact information. Ask when facts are missing.
 
 ## Ember links
 - Source: https://github.com/Tom-Olsen/Ember
-- Documentation: https://tom-olsen.github.io/Ember/
+- Documentation: https://tom-olsen.github.io/Ember/docs/
+- Showcase: https://tom-olsen.github.io/Ember/showcase/
+- Sparkive: https://tom-olsen.github.io/sparkive/
 
 ## Site structure
 - `index.html` contains the page content and semantic structure.

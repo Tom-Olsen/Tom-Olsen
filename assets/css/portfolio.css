@@ -10,6 +10,11 @@ h1, h2, h3, h4, h5, h6, label,
 	letter-spacing: 0.025em;
 }
 
+/* Let the header fit every action when the buttons stack on narrow screens. */
+#header .content .inner {
+    max-height: none;
+}
+
 /* Every button shares the transparent, white-outline appearance of About. */
 button,
 input[type="submit"],
