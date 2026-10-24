@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Copy only the two compiled resumes from a local private resume checkout."""
+"""Copy only the two compiled web resumes from a local private resume checkout."""
 
 import argparse
 from pathlib import Path
@@ -13,13 +13,14 @@ def main():
         nargs="?",
         type=Path,
         default=portfolio.parent / "lebenslaufTemplate",
-        help="Resume checkout containing resumeDE.pdf and resumeEN.pdf",
+        help="Resume checkout containing resumeDEweb.pdf and resumeENweb.pdf",
     )
     args = parser.parse_args()
 
     # Validate both PDFs before changing either published copy.
     resumes = {}
-    for name in ("resumeDE.pdf", "resumeEN.pdf"):
+    for language in ("DE", "EN"):
+        name = f"resume{language}web.pdf"
         source = args.source / name
         try:
             content = source.read_bytes()

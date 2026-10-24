@@ -1,12 +1,15 @@
 # Updating the public resumes
 
-The portfolio serves `resumes/resumeDE.pdf` and `resumes/resumeEN.pdf` directly.
-The resume repository and LaTeX source can stay private.
+The portfolio serves `resumes/resumeDEweb.pdf` and `resumes/resumeENweb.pdf` directly.
+These public copies come from `resumeDEweb.pdf` and `resumeENweb.pdf`, which omit
+the email address and phone number. The full `resumeDE.pdf` and `resumeEN.pdf` in
+the resume repository are for applications and are never copied by the workflow
+or sync script. The resume repository and LaTeX source can stay private.
 
 The private `lebenslauf` repository includes a `Publish portfolio resumes`
 workflow. Once its `PORTFOLIO_TOKEN` Actions secret is configured, every push to
-`master` copies the two committed PDFs here and commits any changes to `main`.
-Only the PDFs are published; the resume source stays private. Build both PDFs
+`master` copies the two committed web PDFs here and commits any changes to `main`.
+Only the web PDFs are published; the resume source stays private. Build all four PDFs
 before pushing the resume repository. The workflow does not compile LaTeX.
 
 One-time setup is documented in `.github/RESUME_PUBLISHING.md` in the private
@@ -26,7 +29,8 @@ For a different resume checkout, pass its directory to the script:
 python3 scripts/sync_resumes.py /path/to/lebenslauf
 ```
 
-The script copies only the two named PDFs. Commit and push the updated PDFs along
-with the portfolio to publish them through GitHub Pages. The resume buttons keep
-the same URLs and open the published PDFs in a new tab.
+The script requires both web PDFs and never falls back to the full versions.
+It preserves their names as `resumes/resumeDEweb.pdf` and `resumes/resumeENweb.pdf`.
+Commit and push the updated PDFs along with the portfolio to publish them through
+GitHub Pages. The resume buttons open the web PDFs in a new tab.
 

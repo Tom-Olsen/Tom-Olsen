@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <title>Graduation cap</title>
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12 16 5l14 7-14 7Z"/>
+    <path d="M8 15v8c4 4 12 4 16 0v-8"/>
+    <path d="M30 12v10m-1 4 1-4 1 4"/>
+  </g>
+</svg>
