@@ -62,7 +62,7 @@
   --note-bg: #29333e;
   --note-border: #759ab9;
 }
-:root[data-theme="dark"] .project-page-heading .page-logo:not(.ember-page-logo) { filter: invert(1); }
+:root[data-theme="dark"] .project-page-heading .page-logo { filter: invert(1); }
 * { box-sizing: border-box; }
 body { margin: 0; line-height: 1.65; }
 a { color: var(--blue); text-decoration: none; text-underline-offset: 0.22em; }
