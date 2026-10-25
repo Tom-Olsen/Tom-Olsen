@@ -17,20 +17,26 @@ This repository builds a personal portfolio at https://tom-olsen.github.io/Tom-O
 - Sparkive: https://tom-olsen.github.io/sparkive/
 
 ## Site structure
-- `index.html` contains the page content and semantic structure.
-- `assets/css/main.css` controls the appearance and responsive layout.
-- `assets/js/main.js` controls hash-based section navigation, active links, and focus management. Without JavaScript, all sections remain readable.
-- `assets/css/header.css` and `assets/js/header.js` mirror the Ember/Sparkive banner: shrinking brand, search, and mobile section drawer. Keep their dimensions, controls, and breakpoints aligned with those sites.
-- `assets/js/theme.js` applies the saved/system palette before rendering and cycles between automatic, light, and dark modes. Page colors use theme tokens in `assets/css/main.css`.
+- Each page has its own source: `content/home/index.md`, `content/phd/index.md`, `content/ember/index.md`, and `content/sparkive/index.md`.
+- The page sources contain raw HTML blocks to preserve the existing markup. `scripts/build_site.py` inserts them verbatim into `overrides/index.html`, which holds the shared header, profile sidebar, and footer.
+- `content/stylesheets/main.css` controls the appearance and responsive layout.
+- `content/javascripts/main.js` controls hash-based section navigation, active links, and focus management. Without JavaScript, all sections remain readable.
+- `content/stylesheets/header.css` and `content/javascripts/header.js` mirror the Ember/Sparkive banner: shrinking brand, search, and mobile section drawer. Keep their dimensions, controls, and breakpoints aligned with those sites.
+- `content/javascripts/theme.js` applies the saved/system palette before rendering and cycles between automatic, light, and dark modes. Page colors use theme tokens in `content/stylesheets/main.css`.
+- `content/fonts/` and `content/sass/` hold fonts and legacy Sass sources.
 - `brand/` contains the Ember and Sparkive logos.
 - `images/portrait.jpg` is the profile portrait.
 - `images/` contains background and project media.
-- `README.txt` and the unused legacy assets document the original HTML5 UP Dimension template. The current design is independent of that template.
-- `README.md` is the public GitHub profile README. Keep it short and focused on the repository's intent.
+- The unused legacy assets come from the original HTML5 UP Dimension template. The current design is independent of that template.
+- `site/` is generated output and is ignored by Git. The build preserves the public `assets/css/`, `assets/js/`, `assets/fonts/`, `assets/sass/`, `brand/`, `images/`, and `resumes/` URLs, as well as the existing hash links.
+- `.github/workflows/docs.yml` builds and deploys `site/` with GitHub Actions, analogous to Sparkive. GitHub Pages must use GitHub Actions as its source.
+- `readme.md` is the public GitHub profile README. Keep it short and focused on the repository's intent. Development and resume instructions live in `scripts/README.md`.
 
 ## Development approach
-- This is a static site: no package manager, framework, compilation, or build step is currently required.
-- Open `index.html` directly for a quick preview. Use a local HTTP server when browser behavior differs from GitHub Pages.
+- This is a static site with a Python 3 standard-library build; no third-party dependencies are required.
+- Run `python3 scripts/build_site.py` to build `site/`. Edit the sources rather than the generated files.
+- Run `./preview.sh` for a local HTTP preview on port 8002, or `./preview.sh 8003` to choose another port. Reload the browser after editing; the preview rebuilds on page requests.
+- The layout and page files are assembled without Markdown conversion so that the generated HTML remains unchanged by the structural refactor.
 - Make changes in small, understandable steps so user can learn the relevant HTML, CSS, and JavaScript concepts.
 - The current page uses its own CSS and JavaScript; do not reintroduce the Dimension modal layout or its dependencies.
 - Prefer semantic HTML, accessible labels and alternative text, responsive layouts, and external links protected with `rel="noopener noreferrer"`.

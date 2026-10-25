@@ -1,0 +1,19 @@
+<article class="page-section" id="ember" aria-labelledby="ember-title">
+        <header class="page-heading project-page-heading">
+          <div class="project-title-line"><div><p class="eyebrow">Independent project · Game engine</p><h1 id="ember-title">Ember<span class="accent">.</span></h1></div><svg class="page-logo ember-page-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 200" width="74" height="100" role="img" aria-label="Ember flame logo"><path d="M 53.1 10.3 C 58.4 13.8, 60.2 18.2, 59.7 26.2 C 59 37.9, 50.4 53, 35.6 68.8 C 22.1 83.2, 15 94.6, 10.9 108 C 7.5 118.8, 7.5 136.4, 10.8 147 C 16.5 165.4, 30.2 180.9, 47.4 188.5 C 55.3 192, 55.9 191.7, 51.2 186.6 C 46.2 181.2, 44.1 176.4, 43.3 168.9 C 42.5 160.7, 44.8 154.6, 53.7 141.2 C 59.9 132, 61.4 129.1, 61.8 125.1 C 62.1 121.5, 61.8 119.6, 60.4 117.5 L 58.6 114.7 L 61.5 115.4 C 74.6 118.6, 85 129.6, 86.6 142.2 C 87 144.8, 87.6 147, 88.1 147 C 89.5 147, 94 139.7, 94 137.3 C 94 133.5, 95.8 133.8, 98.8 138.3 C 102.4 143.5, 105 151.7, 105 158 C 105 167.2, 100.3 180.1, 93.9 188.1 L 90.9 191.9 L 93.8 191.1 C 99.5 189.4, 106.3 185.9, 112.5 181.5 C 138.6 162.9, 147.3 127.2, 133 97.5 C 130.3 91.9, 126.8 86.9, 121.2 80.8 C 111.4 70.1, 110 65.3, 114.8 59.7 C 116.2 58.1, 116.1 58, 113.7 58 C 109.7 58, 106.4 62.7, 105.1 70.7 C 103.4 79.9, 101.2 84.8, 97.9 86.6 C 93.9 88.6, 92.4 88.4, 88.9 85.2 C 84 80.8, 83.9 75.6, 88.4 62.7 C 93.2 48.7, 93.1 40.5, 87.9 29.5 C 82.2 17.3, 67.4 8.1, 53.6 8 L 49.7 8 L 53.1 10.3 Z"/></svg></div>
+          <p class="lead">My playground for real-time graphics, GPU simulation, and the architecture that brings it all together.</p>
+          <p>Ember is a cross-platform C++20 game engine built with Vulkan, SDL3, and Dear ImGui. I develop it to explore rendering techniques and build the systems behind interactive applications.</p>
+          <div class="action-links">
+            <a class="button button-primary" href="https://github.com/Tom-Olsen/Ember" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i> Source code <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="https://tom-olsen.github.io/Ember/showcase/" target="_blank" rel="noopener noreferrer">Showcase <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="https://tom-olsen.github.io/Ember/docs/" target="_blank" rel="noopener noreferrer">Documentation <span aria-hidden="true">↗</span></a>
+          </div>
+        </header>
+        <section class="content-section" aria-labelledby="engine-title">
+          <div class="section-heading"><h2 id="engine-title">Inside the engine</h2></div>
+          <div class="detail-row"><span class="detail-number">01</span><div><h3>Real-time rendering</h3><p>A Vulkan render graph brings together deferred and forward rendering, shadows, post-processing, and compute passes.</p></div></div>
+          <div class="detail-row"><span class="detail-number">02</span><div><h3>GPU workflows</h3><p>HLSL shaders, reflection-driven resource binding, and explicit synchronization support rendering and simulation.</p></div></div>
+          <div class="detail-row"><span class="detail-number">03</span><div><h3>Modular architecture</h3><p>Interchangeable backends, an entity-component system, multithreaded tasks, and editor tooling support game, editor, and headless applications.</p></div></div>
+        </section>
+        <aside class="project-note" aria-label="More about Ember"><h3>See it in action. Explore how it works.</h3><p>Rendering and simulation demonstrations live on Ember’s own website, alongside the technical documentation.</p><a class="text-link" href="https://tom-olsen.github.io/Ember/" target="_blank" rel="noopener noreferrer">Ember homepage <span aria-hidden="true">↗</span></a></aside>
+      </article>
